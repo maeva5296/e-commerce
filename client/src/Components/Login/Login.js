@@ -4,12 +4,12 @@ import "./Login.css"
 function Login() {
     return(
         <div id="form" className="container">
-            <div className="row justify-content-center align-items-center">
+            <div className="row justify-content-center">
                 <div className="col mb-3">
                 <h2 className="text-center">Identifiez vous</h2>
                 </div>
             </div>
-            <div className="row justify-content-center align-items-center">
+            <div className="row justify-content-center">
                 <div className="card col-md-5" id="cardContent">
                     <div className="card-body">
                         <form>

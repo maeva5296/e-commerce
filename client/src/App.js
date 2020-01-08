@@ -2,6 +2,7 @@
 import React from 'react';
 import NavBar from './Components/NavBar/NavBar';
 import Home from './Components/Home/Home';
+import Article from './Components/Article/Article';
 import Footer from './Components/Footer/Footer';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
@@ -11,7 +12,8 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      <Home />
+      <Article/>
+      {/* <Home /> */}
       {/* <Register/> */}
       {/* <Login/> */}
       <Footer/>
