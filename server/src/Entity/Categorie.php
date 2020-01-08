@@ -24,13 +24,11 @@ class Categorie
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"post"})
      */
     private $name;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Articles", mappedBy="categorie_id")
-     * @Groups({"post"})
      * @Assert\NotBlank
      */
     private $articles;
