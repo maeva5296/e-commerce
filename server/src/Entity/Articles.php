@@ -3,8 +3,8 @@
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
-use Symfony\Component\Serializer\Annotation\Groups;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
@@ -30,6 +30,7 @@ class Articles
     /**
      * @ORM\Column(type="float")
      * @Groups({"post"})
+     * @Assert\NotBlank
      */
     private $prix;
 
