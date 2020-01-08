@@ -18,31 +18,31 @@ function Home() {
             </div>
             <div className="row mt-5">
                 <div className="col">
-                    <img src="./images/carte-graphique.jpg" className="img-thumbnail" />
+                    <img src="./images/categories/carte-graphique.jpg" className="img-thumbnail" />
                     <div class="overlay img-thumbnail">
                         <div class="text">Carte graphique</div>
                     </div>
                 </div>
                 <div className="col">
-                    <img src="./images/alimentation.jpg" className="img-thumbnail" />
+                    <img src="./images/categories/alimentation.jpg" className="img-thumbnail" />
                     <div class="overlay img-thumbnail">
                         <div class="text">Alimentation</div>
                     </div>
                 </div>
                 <div className="col">
-                    <img src="./images/processeur.jpg" className="img-thumbnail" />
+                    <img src="./images/categories/processeur.jpg" className="img-thumbnail" />
                     <div class="overlay img-thumbnail">
                         <div class="text">Processeur</div>
                     </div>
                 </div>
                 <div className="col">
-                    <img src="./images/boitier.jpg" className="img-thumbnail" />
+                    <img src="./images/categories/boitier.jpg" className="img-thumbnail" />
                     <div class="overlay img-thumbnail">
                         <div class="text">Boitier PC</div>
                     </div>
                 </div>
                 <div className="col">
-                    <img src="./images/ram.jpg" className="img-thumbnail" />
+                    <img src="./images/categories/ram.jpg" className="img-thumbnail" />
                     <div class="overlay img-thumbnail">
                         <div class="text">Mémoires</div>
                     </div>
@@ -50,31 +50,31 @@ function Home() {
             </div>
             <div className="row mt-5">
                 <div className="col">
-                    <img src="./images/ssd.jpg" className="img-thumbnail" />
+                    <img src="./images/categories/ssd.jpg" className="img-thumbnail" />
                     <div class="overlay img-thumbnail">
                         <div class="text">Stockage</div>
                     </div>
                 </div>
                 <div className="col">
-                    <img src="./images/watercooling.jpg" className="img-thumbnail" />
+                    <img src="./images/categories/watercooling.jpg" className="img-thumbnail" />
                     <div class="overlay img-thumbnail">
                         <div class="text">Refroidissement</div>
                     </div>
                 </div>
                 <div className="col">
-                    <img src="./images/carte-mère.jpg" className="img-thumbnail" />
+                    <img src="./images/categories/carte-mère.jpg" className="img-thumbnail" />
                     <div class="overlay img-thumbnail">
                         <div class="text">Carte mère</div>
                     </div>
                 </div>
                 <div className="col">
-                    <img src="./images/carte-son.jpg" className="img-thumbnail" />
+                    <img src="./images/categories/carte-son.jpg" className="img-thumbnail" />
                     <div class="overlay img-thumbnail">
                         <div class="text">Carte son</div>
                     </div>
                 </div>
                 <div className="col">
-                    <img src="./images/kit-upgrade.jpg" className="img-thumbnail" />
+                    <img src="./images/categories/kit-upgrade.jpg" className="img-thumbnail" />
                     <div class="overlay img-thumbnail">
                         <div class="text">Kit d'upgrade</div>
                     </div>

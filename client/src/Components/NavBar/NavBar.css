@@ -9,3 +9,7 @@
 .navbar {
     border-bottom: 2px solid #ffc107;
 }
+#logo {
+    width: 30%;
+    margin-bottom: 10px;
+}

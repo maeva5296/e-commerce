@@ -7,7 +7,7 @@ function NavBar() {
         <nav className="navbar navbar-dark bg-dark">
             <div className="container">
                 <a href="#">
-                    <img className="img-fluid" src="./images/logo.png" />
+                    <img className="img-fluid" src="./images/logo.png" id="logo" />
                 </a>
                 <form className="form-inline my-2 my-lg-0">
                     <input className="form-control mr-sm-2" type="search" placeholder="Rechercher" />
