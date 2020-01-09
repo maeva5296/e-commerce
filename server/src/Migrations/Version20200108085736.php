@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20200107133900 extends AbstractMigration
+final class Version20200108085736 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -22,10 +22,7 @@ final class Version20200107133900 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('CREATE TABLE categorie (id INT AUTO_INCREMENT NOT NULL, name VARCHAR(255) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
-        $this->addSql('ALTER TABLE articles ADD categorie_id_id INT DEFAULT NULL');
-        $this->addSql('ALTER TABLE articles ADD CONSTRAINT FK_BFDD31688A3C7387 FOREIGN KEY (categorie_id_id) REFERENCES categorie (id)');
-        $this->addSql('CREATE INDEX IDX_BFDD31688A3C7387 ON articles (categorie_id_id)');
+        $this->addSql('CREATE TABLE user (id INT AUTO_INCREMENT NOT NULL, lastname VARCHAR(255) NOT NULL, name VARCHAR(255) NOT NULL, email VARCHAR(180) NOT NULL, password VARCHAR(255) NOT NULL, gender INT NOT NULL, roles LONGTEXT DEFAULT NULL COMMENT \'(DC2Type:json)\', UNIQUE INDEX UNIQ_8D93D649E7927C74 (email), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
     }
 
     public function down(Schema $schema) : void
@@ -33,9 +30,6 @@ final class Version20200107133900 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE articles DROP FOREIGN KEY FK_BFDD31688A3C7387');
-        $this->addSql('DROP TABLE categorie');
-        $this->addSql('DROP INDEX IDX_BFDD31688A3C7387 ON articles');
-        $this->addSql('ALTER TABLE articles DROP categorie_id_id');
+        $this->addSql('DROP TABLE user');
     }
 }

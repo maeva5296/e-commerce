@@ -8,7 +8,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ApiResource(denormalizationContext={"groups"={"post"}})
+ * @ApiResource()
  * @ORM\Entity(repositoryClass="App\Repository\ArticlesRepository")
  */
 class Articles
@@ -22,35 +22,35 @@ class Articles
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"post"})
+     *
      * @Assert\NotBlank
      */
     private $name;
 
     /**
      * @ORM\Column(type="float")
-     * @Groups({"post"})
+     * 
      * @Assert\NotBlank
      */
-    private $prix;
+    private $price;
 
     /**
      * @ORM\Column(type="text", nullable=true)
-     * @Groups({"post"})
+     * 
      */
     private $description;
 
     /**
      * @ORM\Column(type="text", nullable=true)
-     * @Groups({"post"})
+     * 
      */
     private $image;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Categorie", inversedBy="articles")
-     * @Groups({"post"})
+     * @ORM\ManyToOne(targetEntity="App\Entity\Categories", inversedBy="articles")
+     * 
      */
-    private $categorie_id;
+    private $category_id;
 
     public function getId(): ?int
     {
@@ -69,14 +69,14 @@ class Articles
         return $this;
     }
 
-    public function getPrix(): ?float
+    public function getPrice(): ?float
     {
-        return $this->prix;
+        return $this->price;
     }
 
-    public function setPrix(float $prix): self
+    public function setPrice(float $price): self
     {
-        $this->prix = $prix;
+        $this->price = $price;
 
         return $this;
     }
@@ -105,14 +105,14 @@ class Articles
         return $this;
     }
 
-    public function getCategorieId(): ?Categorie
+    public function getCategoryId(): ?Categories
     {
-        return $this->categorie_id;
+        return $this->category_id;
     }
 
-    public function setCategorieId(?Categorie $categorie_id): self
+    public function setCategoryId(?Categories $category_id): self
     {
-        $this->categorie_id = $categorie_id;
+        $this->category_id = $category_id;
 
         return $this;
     }

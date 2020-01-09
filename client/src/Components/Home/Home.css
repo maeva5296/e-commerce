@@ -10,7 +10,7 @@
     transition: .5s ease;
     background-color: rgba(0, 0, 0, .8);
 }
-.col:hover .overlay {
+.col-3:hover .overlay {
     opacity: 1;
 }
 .text {
@@ -27,9 +27,9 @@
 h2 {
     color: #343a40;
 }
-.card {
-    width: 15rem;
-}
+/* #img_categorie {
+    width: 10rem;
+} */
 .btn:hover {
     background-color: #343a40;
     color: white;
