@@ -13,27 +13,27 @@ function NavBar() {
                     <input className="form-control mr-sm-2" type="search" placeholder="Rechercher" />
                     <button className="btn btn-warning my-2 my-sm-0" type="submit"><i className="fas fa-search"></i></button>
                     <div className="icons-nav">
-                        <div class="dropdown">
+                        <div className="dropdown">
                             <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i className="fas fa-user"></i>
+                                <i classNameName="fas fa-user"></i>
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="#">Mon profil</a>
-                                <a class="dropdown-item" href="#">Mes commandes</a>
-                                <a class="dropdown-item text-danger" href="#">Déconnexion</a>
+                            <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a className="dropdown-item" href="#">Mon profil</a>
+                                <a className="dropdown-item" href="#">Mes commandes</a>
+                                <a className="dropdown-item text-danger" href="#">Déconnexion</a>
                             </div>
                         </div>
-                        <div class="dropdown">
+                        <div className="dropdown">
                             <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i className="fas fa-shopping-cart"></i>
+                                <i classNameName="fas fa-shopping-cart"></i>
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="#">Article 1</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Article 2</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Article 3</a>
-                                <button type="button" class="btn btn-warning btn-block" id="voir-panier">Voir panier ></button>
+                            <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a className="dropdown-item" href="#">Article 1</a>
+                                <div className="dropdown-divider"></div>
+                                <a className="dropdown-item" href="#">Article 2</a>
+                                <div className="dropdown-divider"></div>
+                                <a className="dropdown-item" href="#">Article 3</a>
+                                <button type="button" className="btn btn-warning btn-block" id="voir-panier">Voir panier ></button>
                             </div>
                         </div>
                     </div>
