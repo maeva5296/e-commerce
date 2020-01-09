@@ -14,7 +14,7 @@ function NavBar() {
                     <button className="btn btn-warning my-2 my-sm-0" type="submit"><i className="fas fa-search"></i></button>
                     <div className="icons-nav">
                         <div class="dropdown">
-                            <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown">
+                            <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i className="fas fa-user"></i>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -23,9 +23,19 @@ function NavBar() {
                                 <a class="dropdown-item text-danger" href="#">Déconnexion</a>
                             </div>
                         </div>
-                        <a href="#">
-                            <i className="fas fa-shopping-cart"></i>
-                        </a>
+                        <div class="dropdown">
+                            <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i className="fas fa-shopping-cart"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Article 1</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Article 2</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Article 3</a>
+                                <button type="button" class="btn btn-warning btn-block" id="voir-panier">Voir panier ></button>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
