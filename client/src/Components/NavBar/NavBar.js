@@ -13,9 +13,16 @@ function NavBar() {
                     <input className="form-control mr-sm-2" type="search" placeholder="Rechercher" />
                     <button className="btn btn-warning my-2 my-sm-0" type="submit"><i className="fas fa-search"></i></button>
                     <div className="icons-nav">
-                        <a href="#">
-                        <i className="fas fa-user"></i>
-                        </a>
+                        <div class="dropdown">
+                            <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown">
+                                <i className="fas fa-user"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Mon profil</a>
+                                <a class="dropdown-item" href="#">Mes commandes</a>
+                                <a class="dropdown-item text-danger" href="#">Déconnexion</a>
+                            </div>
+                        </div>
                         <a href="#">
                             <i className="fas fa-shopping-cart"></i>
                         </a>
