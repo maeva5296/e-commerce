@@ -6,11 +6,13 @@ import Article from './Components/Article/Article';
 import Footer from './Components/Footer/Footer';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
+import Admin from './Components/Admin/Admin';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      {/* <Admin/> */}
       <NavBar/>
       <Home />
       {/* <Article/> */}
