@@ -75,38 +75,38 @@ class Home extends React.Component {
                     </div>
                     <div className="row mt-5">
                         <div className="col">
-                            <div class="card">
-                                <img src="./images/products/msi-rtx.jpg" class="card-img-top img-thumbnail" />
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">MSI RTX 2060 super Gaming X</h5>
-                                    <a href="#" class="btn btn-warning pr-5 pl-5 font-weight-bold">Voir</a>
+                            <div className="card">
+                                <img src="./images/products/msi-rtx.jpg" className="card-img-top img-thumbnail" />
+                                <div className="card-body text-center">
+                                    <h5 className="card-title">MSI RTX 2060 super Gaming X</h5>
+                                    <a href="#" className="btn btn-warning pr-5 pl-5 font-weight-bold">Voir</a>
                                 </div>
                             </div>
                         </div>
                         <div className="col">
-                            <div class="card">
-                                <img src="./images/products/coolermaster.jpg" class="card-img-top img-thumbnail" />
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">Cooler Master MasterBox E500L</h5>
-                                    <a href="#" class="btn btn-warning pr-5 pl-5 font-weight-bold">Voir</a>
+                            <div className="card">
+                                <img src="./images/products/coolermaster.jpg" className="card-img-top img-thumbnail" />
+                                <div className="card-body text-center">
+                                    <h5 className="card-title">Cooler Master MasterBox E500L</h5>
+                                    <a href="#" className="btn btn-warning pr-5 pl-5 font-weight-bold">Voir</a>
                                 </div>
                             </div>
                         </div>
                         <div className="col">
-                            <div class="card">
-                                <img src="./images/products/fury.jpg" class="card-img-top img-thumbnail" />
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">HyperX Fury DDR4 2 x 8 Go</h5>
-                                    <a href="#" class="btn btn-warning pr-5 pl-5 font-weight-bold">Voir</a>
+                            <div className="card">
+                                <img src="./images/products/fury.jpg" className="card-img-top img-thumbnail" />
+                                <div className="card-body text-center">
+                                    <h5 className="card-title">HyperX Fury DDR4 2 x 8 Go</h5>
+                                    <a href="#" className="btn btn-warning pr-5 pl-5 font-weight-bold">Voir</a>
                                 </div>
                             </div>
                         </div>
                         <div className="col">
-                            <div class="card">
-                                <img src="./images/products/crucial-ssd.jpg" class="card-img-top img-thumbnail" />
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">SSD Crucial MX500 - 500 GO</h5>
-                                    <a href="#" class="btn btn-warning pr-5 pl-5 font-weight-bold">Voir</a>
+                            <div className="card">
+                                <img src="./images/products/crucial-ssd.jpg" className="card-img-top img-thumbnail" />
+                                <div className="card-body text-center">
+                                    <h5 className="card-title">SSD Crucial MX500 - 500 GO</h5>
+                                    <a href="#" className="btn btn-warning pr-5 pl-5 font-weight-bold">Voir</a>
                                 </div>
                             </div>
                         </div>
