@@ -15,7 +15,7 @@ function NavBar() {
                     <div className="icons-nav">
                         <div className="dropdown">
                             <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i classNameName="fas fa-user"></i>
+                                <i className="fas fa-user"></i>
                             </a>
                             <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 <a className="dropdown-item" href="#">Mon profil</a>
@@ -25,7 +25,7 @@ function NavBar() {
                         </div>
                         <div className="dropdown">
                             <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i classNameName="fas fa-shopping-cart"></i>
+                                <i className="fas fa-shopping-cart"></i>
                             </a>
                             <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 <a className="dropdown-item" href="#">Article 1</a>
