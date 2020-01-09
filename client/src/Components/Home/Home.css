@@ -30,3 +30,7 @@ h2 {
 .card {
     width: 15rem;
 }
+.btn:hover {
+    background-color: #343a40;
+    color: white;
+}
