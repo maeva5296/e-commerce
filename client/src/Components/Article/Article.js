@@ -1,4 +1,6 @@
 import React from "react";
+import NavBar from "../NavBar/NavBar";
+import Footer from "../Footer/Footer";
 import "./Article.css";
 
 class Article extends React.Component {

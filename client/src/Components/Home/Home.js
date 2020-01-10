@@ -1,4 +1,13 @@
 import React from "react";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+import NavBar from "../NavBar/NavBar";
+import Footer from "../Footer/Footer";
+import Ariane from '../Ariane/Ariane';
 import './Home.css';
 
 
@@ -30,7 +39,7 @@ class Home extends React.Component {
           }
         )
     }
-  
+
     render() {
       const { error, isLoaded, categorie } = this.state;
       if (error) {
@@ -40,11 +49,13 @@ class Home extends React.Component {
       } else {
         return (
             <div>
+                <NavBar/>
                 <div className="container-fluid">
                     <div className="row">
                         <img className="img-fluid" src="./images/banner.jpg" />
                     </div>
                 </div>
+                <Ariane/>
                 <div className="container">
                     <div className="row mt-5">
                         <div className="col text-center">
@@ -53,11 +64,13 @@ class Home extends React.Component {
                     </div>
                     <div className="row mt-5">
                         {categorie.map(categorie => (
-                        <div className="col-3">
+                            <div className="col-3">
+                            <Link to={`/articles/${categorie.id}`}>
                             <img key={categorie.image} src={categorie.image} className="img-thumbnail" id="img_categorie" />
                             <div className="overlay img-thumbnail">
                                 <div key={categorie.name} className="text">{categorie.name}</div>
                             </div>
+                        </Link>
                         </div>
                         ))}
                     </div>
@@ -112,6 +125,7 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </div>
+                <Footer/>
             </div>
         );
       }
