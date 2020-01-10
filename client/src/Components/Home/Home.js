@@ -1,4 +1,12 @@
 import React from "react";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+import NavBar from "../NavBar/NavBar";
+import Footer from "../Footer/Footer";
 import './Home.css';
 
 
@@ -40,6 +48,7 @@ class Home extends React.Component {
       } else {
         return (
             <div>
+                <NavBar/>
                 <div className="container-fluid">
                     <div className="row">
                         <img className="img-fluid" src="./images/banner.jpg" />
@@ -112,6 +121,7 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </div>
+                <Footer/>
             </div>
         );
       }
