@@ -14,8 +14,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      {/* <AdminArticles /> */}
-      <Test/>
+      <AdminArticles />
+      {/* <Test/> */}
       {/* <NavBar/>
       <Home /> */}
       {/* <Register/> */}
