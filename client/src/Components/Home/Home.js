@@ -39,7 +39,7 @@ class Home extends React.Component {
           }
         )
     }
-  
+
     render() {
       const { error, isLoaded, categorie } = this.state;
       if (error) {
@@ -64,11 +64,13 @@ class Home extends React.Component {
                     </div>
                     <div className="row mt-5">
                         {categorie.map(categorie => (
-                        <div className="col-3">
+                            <div className="col-3">
+                            <Link to={`/articles/${categorie.id}`}>
                             <img key={categorie.image} src={categorie.image} className="img-thumbnail" id="img_categorie" />
                             <div className="overlay img-thumbnail">
                                 <div key={categorie.name} className="text">{categorie.name}</div>
                             </div>
+                        </Link>
                         </div>
                         ))}
                     </div>
