@@ -7,15 +7,17 @@ import Footer from './Components/Footer/Footer';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import Admin from './Components/Admin/Admin';
+import Ariane from './Components/Ariane/Ariane';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Admin/>
-      {/* <NavBar/> */}
+      {/* <Admin/> */}
+      <NavBar/>
       {/* <Home /> */}
-      {/* <Article/> */}
+      <Ariane/>
+      <Article/>
       {/* <Register/> */}
       {/* <Login/> */}
       {/* <Footer/> */}
