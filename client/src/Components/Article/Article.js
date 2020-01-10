@@ -14,15 +14,17 @@ class Article extends React.Component {
       }
     
       componentDidMount() {
-        fetch("https://127.0.0.1:8000/api/articles")
+        fetch(`https://127.0.0.1:8000/api/categories/${this.props.match.params.id}`)
           .then(res => res.json())
           .then(
             (result) => {
+                console.log(result['articles']);
               this.setState({
                 isLoaded: true,
-                article: result['hydra:member']
+                article: result['articles']
               });
             },
+            
             (error) => {
               this.setState({
                 isLoaded: true,
@@ -43,17 +45,20 @@ class Article extends React.Component {
                 <div id="form" className="container">
                     <div className="row justify-content-center">
                         <div class="card-group">
-                            <div className="card">
+                            { article.map(article => (
+                                <div className="card">
                                 <img key={ article.image } src={ article.image } className="card-img-top" alt="radeon"/>
                                 <div className="card-body">
                                 <h5 key={ article.name } className="card-title">{ article.name }</h5>
                                 <p key={ article.description } className="card-text">{ article.description }</p>
+                                <p key={ article.stock } className="card-text">{ article.stock }</p>
                                 <div id="article">
                                 <h5 key={ article.price } class="text-center font-weight-bold" id="price">{ article.price }<small className="font-weight-bold">€</small></h5>
                                 <button type="submit" className="btn btn-success">Ajouter au panier <i className="fas fa-shopping-cart"></i></button>
                                 </div>
                                 </div>
                             </div>
+                            ))}
                         </div>
                     </div>
                 </div>
