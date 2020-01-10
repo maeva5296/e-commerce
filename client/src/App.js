@@ -10,7 +10,6 @@ import Article from './Components/Article/Article';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import Admin from './Components/Admin/Admin';
-import Ariane from './Components/Ariane/Ariane';
 import './App.css';
 
 function App() {
