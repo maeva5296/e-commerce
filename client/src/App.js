@@ -21,7 +21,7 @@ function App() {
           <Route path="/register" component={Register}/>
           <Route path="/login" component={Login}/>
           <Route path="/admin" component={Admin}/>
-          <Route path="/articles" component={Article}/>
+          <Route path="/articles/:id" render={(props) => <Article {...props}/>}/>
         </Switch>
       </Router>
     </div>
