@@ -10,6 +10,7 @@ import Article from './Components/Article/Article';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import Admin from './Components/Admin/Admin';
+import Test from './Components/Test/Test';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/login" component={Login}/>
           <Route path="/admin" component={Admin}/>
           <Route path="/articles" component={Article}/>
+          <Route path="/test/:id" render={(props) => <Test {...props}/>}/>
         </Switch>
       </Router>
     </div>
