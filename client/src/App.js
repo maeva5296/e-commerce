@@ -14,9 +14,9 @@ function App() {
   return (
     <div className="App">
       {/* <Admin/> */}
-      <NavBar/>
+      {/* <NavBar/> */}
       {/* <Home /> */}
-      <Ariane/>
+      {/* <Ariane/> */}
       <Article/>
       {/* <Register/> */}
       {/* <Login/> */}
