@@ -42,6 +42,8 @@ class Article extends React.Component {
           return <div>Chargement…</div>;
         } else {
             return (
+              <div>
+                <NavBar/>
                 <div id="form" className="container">
                     <div className="row justify-content-center">
                         <div class="card-group">
@@ -62,6 +64,8 @@ class Article extends React.Component {
                         </div>
                     </div>
                 </div>
+                <Footer/>
+              </div>
             )
         }
     }
