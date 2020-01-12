@@ -49,7 +49,7 @@ class Category extends React.Component {
                 <div className="row mt-5">
                     {categorie.map(categorie => (
                         <div className="col-3">
-                        <Link to={`/test/${categorie.id}`}>
+                        <Link to={`/articles/${categorie.id}`}>
                         <img key={categorie.image} src={categorie.image} className="img-thumbnail" id="img_categorie" />
                         <div className="overlay img-thumbnail">
                             <div key={categorie.name} className="text">{categorie.name}</div>
