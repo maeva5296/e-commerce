@@ -23,7 +23,6 @@ function App() {
           <Route path="/login" component={Login}/>
           <Route path="/admin" component={Admin}/>
           <Route path="/articles" component={Article}/>
-          <Route path="/test/:id" render={(props) => <Test {...props}/>}/>
         </Switch>
       </Router>
     </div>

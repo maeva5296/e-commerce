@@ -13,7 +13,7 @@ class Test extends React.Component {
       this.state = {
         error: null,
         isLoaded: false,
-        test: []
+        test: [],
       };
     }
   
@@ -22,7 +22,6 @@ class Test extends React.Component {
         .then(res => res.json())
         .then(
           (result) => {
-              console.log(result['articles'])
             this.setState({
               isLoaded: true,
               test: result['articles']
@@ -34,10 +33,21 @@ class Test extends React.Component {
               error
             });
           }
-        )
+      )
     }
 
+    TestView() {
+      console.log(this.state.test[0])
+        fetch(`https://127.0.0.1:8000${this.state.test[0]}`)
+        .then(
+          (result) => {
+            console.log(result)
+          }
+        )
+    }
+    
     render() {
+      this.TestView()
       const { error, isLoaded, test } = this.state;
       if (error) {
         return <div>Erreur : {error.message}</div>;
@@ -47,7 +57,7 @@ class Test extends React.Component {
         return (
             <div>
                 {test.map(test => (
-                <div>
+                <div key={test}>
                     {test}
                 </div>
                 ))}
