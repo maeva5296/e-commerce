@@ -6,11 +6,17 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ApiResource()
+ * @ApiResource(
+ *      normalizationContext={"groups"={"user:read"}},
+ *      denormalizationContext={"groups"={"user:write"}},
+ * )
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
- * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
+ * @UniqueEntity(fields={"firstname"})
+ * @UniqueEntity(fields={"email"})
  */
 class User implements UserInterface
 {
@@ -22,35 +28,31 @@ class User implements UserInterface
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $lastname;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $name;
-
-    /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Groups({"user:read", "user:write"})
+     * @Assert\NotBlank()
+     * @Assert\Email()
      */
     private $email;
 
     /**
+     * @ORM\Column(type="json")
+     */
+    private $roles = [];
+
+    /**
      * @var string The hashed password
      * @ORM\Column(type="string")
+     * @Groups({"user:write"})
      */
     private $password;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=255)
+     * @Groups({"user:read", "user:write"})
+     * @Assert\NotBlank()
      */
-    private $gender;
-
-    /**
-     * @ORM\Column(type="json", nullable=true)
-     */
-    private $roles = [];
+    private $firstname;
 
     public function getId(): ?int
     {
@@ -70,42 +72,19 @@ class User implements UserInterface
     }
 
     /**
-    *
-    * @see UserInterface
-    */
-    public function getUsername(): ?string
+     * A visual identifier that represents this user.
+     *
+     * @see UserInterface
+     */
+    public function getUsername(): string
     {
-        return $this->email;
-    }
-
-    public function getLastname(): ?string
-    {
-        return $this->lastname;
-    }
-
-    public function setLastname(string $lastname): self
-    {
-        $this->lastname = $lastname;
-
-        return $this;
-    }
-
-    public function getName(): ?string
-    {
-        return $this->name;
-    }
-
-    public function setName(string $name): self
-    {
-        $this->name = $name;
-
-        return $this;
+        return (string) $this->email;
     }
 
     /**
      * @see UserInterface
      */
-    public function getRoles(): ?string
+    public function getRoles(): array
     {
         $roles = $this->roles;
         // guarantee every user at least has ROLE_USER
@@ -120,11 +99,11 @@ class User implements UserInterface
 
         return $this;
     }
-    
+
     /**
      * @see UserInterface
      */
-    public function getPassword(): ?string
+    public function getPassword(): string
     {
         return (string) $this->password;
     }
@@ -141,7 +120,7 @@ class User implements UserInterface
      */
     public function getSalt()
     {
-
+        // not needed when using the "bcrypt" algorithm in security.yaml
     }
 
     /**
@@ -149,20 +128,18 @@ class User implements UserInterface
      */
     public function eraseCredentials()
     {
-
+        // If you store any temporary, sensitive data on the user, clear it here
+        // $this->plainPassword = null;
     }
 
-    /**
-     * @see UserInterface
-     */
-    public function getGender(): ?int
+    public function getFirstname(): ?string
     {
-        return $this->gender;
+        return $this->firstname;
     }
 
-    public function setGender(int $gender): self
+    public function setFirstname(string $firstname): self
     {
-        $this->gender = $gender;
+        $this->firstname = $firstname;
 
         return $this;
     }
