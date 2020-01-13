@@ -21,7 +21,6 @@ function Home (){
                     <img className="img-fluid" src="./images/banner.jpg" />
                 </div>
             </div>
-            <Ariane/>
             <div className="container">
                 <div className="row mt-5">
                     <div className="col text-center">
