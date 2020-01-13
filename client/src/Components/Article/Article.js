@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
+import Ariane from '../Ariane/Ariane';
 import "./Article.css";
 
 class Article extends React.Component {
@@ -43,6 +44,7 @@ class Article extends React.Component {
         } else {
             return (
                 <div id="form" className="container">
+                  <Ariane />
                     <div className="row justify-content-center">
                         <div class="card-group">
                             { article.map(article => (
