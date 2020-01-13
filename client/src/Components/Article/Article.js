@@ -43,13 +43,15 @@ class Article extends React.Component {
           return <div>Chargement…</div>;
         } else {
             return (
+              <div>
+                <NavBar/>
                 <div id="form" className="container">
                   <Ariane />
                     <div className="row justify-content-center">
                         <div class="card-group">
                             { article.map(article => (
                                 <div className="card">
-                                <img key={ article.image } src={ article.image } className="card-img-top" alt="radeon"/>
+                                <img key={ article.image } src={ article.image } className="card-img-top" alt="Desc Img"/>
                                 <div className="card-body">
                                 <h5 key={ article.name } className="card-title">{ article.name }</h5>
                                 <p key={ article.description } className="card-text">{ article.description }</p>
@@ -64,6 +66,8 @@ class Article extends React.Component {
                         </div>
                     </div>
                 </div>
+                <Footer/>
+              </div>
             )
         }
     }
