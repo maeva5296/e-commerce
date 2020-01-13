@@ -27,10 +27,12 @@
 h2 {
     color: #343a40;
 }
-/* #img_categorie {
-    width: 10rem;
-} */
+
 .btn:hover {
     background-color: #343a40;
     color: white;
+}
+
+#best-articles-card {
+    width: 25%;
 }
