@@ -8,7 +8,7 @@ class DetailsArticle extends Component {
         this.state = {
         error: null,
         isLoaded: false,
-        DeatilsArticle: []
+        DetailsArticle: []
         };
     }
     
