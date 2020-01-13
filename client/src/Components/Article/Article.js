@@ -10,7 +10,8 @@ class Article extends React.Component {
         this.state = {
           error: null,
           isLoaded: false,
-          article: []
+          article: [],
+          categorieName: "",
         };
       }
     
@@ -19,10 +20,10 @@ class Article extends React.Component {
           .then(res => res.json())
           .then(
             (result) => {
-                console.log(result['articles']);
               this.setState({
                 isLoaded: true,
-                article: result['articles']
+                article: result['articles'],
+                categorieName: result['name'],
               });
             },
             
@@ -36,7 +37,7 @@ class Article extends React.Component {
       }
 
       render() {
-        const { error, isLoaded, article } = this.state;
+        const { error, isLoaded, article, categorieName } = this.state;
         if (error) {
           return <div>Erreur : {error.message}</div>;
         } else if (!isLoaded) {
@@ -46,7 +47,7 @@ class Article extends React.Component {
               <div>
                 <NavBar/>
                 <div id="form" className="container">
-                  <Ariane />
+                  <Ariane nameCategorie={ categorieName } />
                     <div className="row justify-content-center">
                         <div class="card-group">
                             { article.map(article => (
@@ -57,7 +58,7 @@ class Article extends React.Component {
                                 <p key={ article.description } className="card-text">{ article.description }</p>
                                 <p key={ article.stock } className="card-text">{ article.stock }</p>
                                 <div id="article">
-                                <h5 key={ article.price } class="text-center font-weight-bold" id="price">{ article.price }<small className="font-weight-bold">€</small></h5>
+                                <h5 key={ article.price } className="text-center font-weight-bold" id="price">{ article.price }<small className="font-weight-bold">€</small></h5>
                                 <button type="submit" className="btn btn-success">Ajouter au panier <i className="fas fa-shopping-cart"></i></button>
                                 </div>
                                 </div>
