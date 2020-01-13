@@ -7,7 +7,6 @@ import {
   } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
-import Ariane from '../Ariane/Ariane';
 import './Home.css';
 
 
@@ -55,7 +54,6 @@ class Home extends React.Component {
                         <img className="img-fluid" src="./images/banner.jpg" />
                     </div>
                 </div>
-                <Ariane/>
                 <div className="container">
                     <div className="row mt-5">
                         <div className="col text-center">
