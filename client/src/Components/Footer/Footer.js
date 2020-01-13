@@ -1,4 +1,5 @@
 import React from "react";
+import Config from "../../config.json";
 import './Footer.css';
 
 
@@ -29,11 +30,11 @@ function Footer() {
                 <div className="row mb-5">
                     <div className="col text-center text-white">
                         <p>Moyens de paiement acceptés</p>
-                        <img className="img-fluid" src="./images/paiment.png" />
+                        <img className="img-fluid" src={ Config.url + "/images/paiment.png" } alt="images paiement" />
                     </div>
                     <div className="col text-center text-white">
                         <p>Nos transporteurs</p>
-                        <img className="img-fluid" src="./images/transporteur.png" />
+                        <img className="img-fluid" src={ Config.url + "/images/transporteur.png" } alt="images transport" />
                     </div>
                 </div>
                 <div className="row mt-5">

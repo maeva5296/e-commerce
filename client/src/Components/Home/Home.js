@@ -1,10 +1,4 @@
 import React from "react";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import Ariane from '../Ariane/Ariane';
@@ -18,7 +12,7 @@ function Home (){
             <NavBar/>
             <div className="container-fluid">
                 <div className="row">
-                    <img className="img-fluid" src="./images/banner.jpg" />
+                    <img className="img-fluid" src="./images/banner.jpg" alt="bannière 1" />
                 </div>
             </div>
             <Ariane/>
@@ -32,7 +26,7 @@ function Home (){
             </div>
             <div className="container-fluid mt-5">
                 <div className="row">
-                    <img className="img-fluid" src="./images/montage-banner.jpg" />
+                    <img className="img-fluid" src="./images/montage-banner.jpg" alt="bannière 2" />
                 </div>
             </div>
             <div className="container">
@@ -44,7 +38,7 @@ function Home (){
                 <div className="row mt-5">
                     <div className="col">
                         <div className="card">
-                            <img src="./images/products/msi-rtx.jpg" className="card-img-top img-thumbnail" />
+                            <img src="./images/products/msi-rtx.jpg" className="card-img-top img-thumbnail" alt="images product" />
                             <div className="card-body text-center">
                                 <h5 className="card-title">MSI RTX 2060 super Gaming X</h5>
                                 <a href="#" className="btn btn-warning pr-5 pl-5 font-weight-bold">Voir</a>
@@ -53,7 +47,7 @@ function Home (){
                     </div>
                     <div className="col">
                         <div className="card">
-                            <img src="./images/products/coolermaster.jpg" className="card-img-top img-thumbnail" />
+                            <img src="./images/products/coolermaster.jpg" className="card-img-top img-thumbnail" alt="images product" />
                             <div className="card-body text-center">
                                 <h5 className="card-title">Cooler Master MasterBox E500L</h5>
                                 <a href="#" className="btn btn-warning pr-5 pl-5 font-weight-bold">Voir</a>
@@ -62,7 +56,7 @@ function Home (){
                     </div>
                     <div className="col">
                         <div className="card">
-                            <img src="./images/products/fury.jpg" className="card-img-top img-thumbnail" />
+                            <img src="./images/products/fury.jpg" className="card-img-top img-thumbnail" alt="images product" />
                             <div className="card-body text-center">
                                 <h5 className="card-title">HyperX Fury DDR4 2 x 8 Go</h5>
                                 <a href="#" className="btn btn-warning pr-5 pl-5 font-weight-bold">Voir</a>
@@ -71,7 +65,7 @@ function Home (){
                     </div>
                     <div className="col">
                         <div className="card">
-                            <img src="./images/products/crucial-ssd.jpg" className="card-img-top img-thumbnail" />
+                            <img src="./images/products/crucial-ssd.jpg" className="card-img-top img-thumbnail" alt="images product" />
                             <div className="card-body text-center">
                                 <h5 className="card-title">SSD Crucial MX500 - 500 GO</h5>
                                 <a href="#" className="btn btn-warning pr-5 pl-5 font-weight-bold">Voir</a>

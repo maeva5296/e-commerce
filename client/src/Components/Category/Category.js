@@ -1,10 +1,5 @@
 import React from "react";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './Category.css';
 
 
@@ -48,13 +43,13 @@ class Category extends React.Component {
             <div>
                 <div className="row mt-5">
                     {categorie.map(categorie => (
-                        <div className="col-3">
+                      <div className="col-3">
                         <Link to={`/articles/${categorie.id}`}>
-                        <img key={categorie.image} src={categorie.image} className="img-thumbnail" id="img_categorie" />
+                        <img key={categorie.image} src={categorie.image} className="img-thumbnail" id="img_categorie" alt="images categories" />
                         <div className="overlay img-thumbnail">
                             <div key={categorie.name} className="text">{categorie.name}</div>
                         </div>
-                    </Link>
+                        </Link>
                     </div>
                     ))}
                 </div>

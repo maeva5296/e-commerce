@@ -42,10 +42,10 @@ class Ariane extends React.Component {
             <div id="form" className="container">
                 <div className="row justify-content">
                     <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#"><i className="fas fa-home"></i></a></li>
+                        <ol className="breadcrumb">
+                            <li className="breadcrumb-item"><a href="#"><i className="fas fa-home"></i></a></li>
                             {categorie.map(categorie => (
-                                <li class="breadcrumb-item active" aria-current="page">{ categorie.name }</li>
+                                <li key={categorie.name} className="breadcrumb-item active" aria-current="page">{ categorie.name }</li>
                             ))}
                         </ol>
                     </nav>
