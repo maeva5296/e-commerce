@@ -1,7 +1,6 @@
 import React from "react";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
-import Ariane from '../Ariane/Ariane';
 import Category from '../Category/Category';
 import './Home.css';
 
@@ -15,7 +14,6 @@ function Home (){
                     <img className="img-fluid" src="./images/banner.jpg" alt="bannière 1" />
                 </div>
             </div>
-            <Ariane/>
             <div className="container">
                 <div className="row mt-5">
                     <div className="col text-center">

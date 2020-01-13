@@ -12,6 +12,7 @@ class Article extends React.Component {
           error: null,
           isLoaded: false,
           article: [],
+          categorieName: "",
         };
       }
     
@@ -23,6 +24,7 @@ class Article extends React.Component {
               this.setState({
                 isLoaded: true,
                 article: result.articles,
+                categorieName: result['name'],
               });
             },
             (error) => {
@@ -48,7 +50,7 @@ class Article extends React.Component {
               <div>
                 <NavBar/>
                 <div className="container">
-                  <Ariane/>
+                <Ariane nameCategorie={ categorieName } />
                   <div className="row justify-content-center">
                     { ArticleDetails }
                   </div>
