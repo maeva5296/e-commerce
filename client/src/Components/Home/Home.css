@@ -33,6 +33,6 @@ h2 {
     color: white;
 }
 
-#best-articles-card {
-    width: 25%;
+.flex {
+    display: flex;
 }
