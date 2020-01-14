@@ -56,6 +56,11 @@ class Article extends React.Component {
             return (
               <div>
                 <NavBar/>
+                <div className="container-fluid">
+                  <div className="row">
+                  <img src="/images/categories/banner_categorie/banner_cg.jpg" />
+                  </div>
+                </div>
                 <div className="container">
                   <Ariane nameCategorie={ categorieName } />
                   <SortArticles id={this.props.match.params.id} sort_path={this.update_state_article} />
