@@ -11,7 +11,7 @@ use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\OrderFilter;
 
 /**
  * @ApiResource()
- * @ApiFilter(OrderFilter::class, properties={"visits"}, arguments={"orderParameterName"="order"})
+ * @ApiFilter(OrderFilter::class, properties={"visits", "price", "name"}, arguments={"orderParameterName"="order"})
  * @ORM\Entity(repositoryClass="App\Repository\ArticlesRepository")
  */
 class Articles
