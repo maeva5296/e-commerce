@@ -2,8 +2,7 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Home from './Components/Home/Home';
 import Article from './Components/Article/Article';
@@ -21,7 +20,7 @@ function App() {
           <Route path="/register" component={Register}/>
           <Route path="/login" component={Login}/>
           <Route path="/admin" component={Admin}/>
-          <Route path="/articles" component={Article}/>
+          <Route path="/articles/:id" render={(props) => <Article {...props}/>}/>
         </Switch>
       </Router>
     </div>
