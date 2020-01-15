@@ -3,16 +3,19 @@ import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import Ariane from "../Ariane/Ariane";
 import DetailsArticle from "../DetailsArticle/DetailsArticle";
+import SortArticles from '../SortArticles/SortArtricles';
 import "./Article.css";
 
 class Article extends React.Component {
     constructor(props) {
         super(props);
+        this.update_state_article = this.update_state_article.bind(this);
         this.state = {
           error: null,
           isLoaded: false,
           article: [],
           categorieName: "",
+          artcilesSort: []
         };
       }
     
@@ -35,9 +38,13 @@ class Article extends React.Component {
             }
           )
       }
+      update_state_article(sorted_path) {
+        this.setState({article:sorted_path})
+      }
 
       render() {
         const { error, isLoaded, article, categorieName } = this.state;
+        console.log(article.length);
         var ArticleDetails = article.map((path) => {
           return <DetailsArticle api_path={path} />
         }) 
@@ -49,8 +56,14 @@ class Article extends React.Component {
             return (
               <div>
                 <NavBar/>
+                <div className="container-fluid">
+                  <div className="row">
+                  <img src="/images/categories/banner_categorie/banner_cg.jpg" />
+                  </div>
+                </div>
                 <div className="container">
-                <Ariane nameCategorie={ categorieName } />
+                  <Ariane nameCategorie={ categorieName } />
+                  <SortArticles id={this.props.match.params.id} sort_path={this.update_state_article} />
                   <div className="row justify-content-center">
                     { ArticleDetails }
                   </div>

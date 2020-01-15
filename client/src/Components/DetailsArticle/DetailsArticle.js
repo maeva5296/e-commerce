@@ -11,27 +11,39 @@ class DetailsArticle extends Component {
         DetailsArticle: []
         };
     }
+
+    search_api()
+    {
+      fetch(`https://127.0.0.1:8000${this.props.api_path}`)
+        .then(res => res.json())
+        .then(
+          (result) => {
+            this.setState({
+              isLoaded: true,
+              DetailsArticle: result
+            });
+          },
+          (error) => {
+            this.setState({
+              isLoaded: true,
+              error
+            });
+          }
+        )
+    }
     
     componentDidMount() {
-        fetch(`https://127.0.0.1:8000${this.props.api_path}`)
-          .then(res => res.json())
-          .then(
-            (result) => {
-              this.setState({
-                isLoaded: true,
-                DetailsArticle: result
-              });
-            },
-            (error) => {
-              this.setState({
-                isLoaded: true,
-                error
-              });
-            }
-          )
+      this.search_api()
       }
 
+    componentDidUpdate(prevProps)
+    {
+      if(prevProps.api_path != this.props.api_path)
+        this.search_api()
+    }
+
     render() {
+      console.log(this.props);
       const { error, isLoaded, DetailsArticle } = this.state;
       if (error) {
         return <div>Erreur : {error.message}</div>;
@@ -44,11 +56,9 @@ class DetailsArticle extends Component {
               <img key={ DetailsArticle.image } src={ Config.url +"/" + DetailsArticle.image } className="card-img-top" alt="Desc Img"/>
               <div className="card-body">
                 <h5 key={ DetailsArticle.name } className="card-title">{ DetailsArticle.name }</h5>
-                <p key={ DetailsArticle.description } className="card-text">{ DetailsArticle.description }</p>
-                <p key={ DetailsArticle.stock } className="card-text">{ DetailsArticle.stock }</p>
                 <div id="article">
                   <h5 key={ DetailsArticle.price } class="text-center font-weight-bold" id="price">{ DetailsArticle.price }<small className="font-weight-bold">€</small></h5>
-                  <button type="submit" className="btn btn-success">Ajouter au panier <i className="fas fa-shopping-cart"></i></button>
+                  <button type="submit" className="btn btn-success">Voir<i className="fas fa-shopping-cart"></i></button>
                 </div>
               </div>
             </div>
