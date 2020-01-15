@@ -43,7 +43,6 @@ class DetailsArticle extends Component {
     }
 
     render() {
-      console.log(this.props);
       const { error, isLoaded, DetailsArticle } = this.state;
       if (error) {
         return <div>Erreur : {error.message}</div>;
