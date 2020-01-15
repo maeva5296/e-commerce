@@ -34,6 +34,7 @@ class UserDataPersister implements DataPersisterInterface
             );
             $data->eraseCredentials();
         }
+        $data->setRoles(['ROLE_USER']);
         $this->entityManager->persist($data);
         $this->entityManager->flush();
     }
