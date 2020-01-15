@@ -4,6 +4,7 @@ import Footer from "../Footer/Footer";
 import Ariane from "../Ariane/Ariane";
 import DetailsArticle from "../DetailsArticle/DetailsArticle";
 import SortArticles from '../SortArticles/SortArtricles';
+import Config from '../../config.json';
 import "./Article.css";
 
 class Article extends React.Component {
@@ -15,6 +16,7 @@ class Article extends React.Component {
           isLoaded: false,
           article: [],
           categorieName: "",
+          categorieBanner:"",
           artcilesSort: []
         };
       }
@@ -28,6 +30,7 @@ class Article extends React.Component {
                 isLoaded: true,
                 article: result.articles,
                 categorieName: result['name'],
+                categorieBanner: result['banner']
               });
             },
             (error) => {
@@ -43,8 +46,7 @@ class Article extends React.Component {
       }
 
       render() {
-        const { error, isLoaded, article, categorieName } = this.state;
-        console.log(article.length);
+        const { error, isLoaded, article, categorieName, categorieBanner } = this.state;
         var ArticleDetails = article.map((path) => {
           return <DetailsArticle api_path={path} />
         }) 
@@ -58,7 +60,7 @@ class Article extends React.Component {
                 <NavBar/>
                 <div className="container-fluid">
                   <div className="row">
-                  <img src="/images/categories/banner_categorie/banner_cg.jpg" />
+                    <img src={ Config.url +"/" + categorieBanner } />
                   </div>
                 </div>
                 <div className="container">

@@ -38,12 +38,11 @@ class DetailsArticle extends Component {
 
     componentDidUpdate(prevProps)
     {
-      if(prevProps.api_path != this.props.api_path)
+      if(prevProps.api_path !== this.props.api_path)
         this.search_api()
     }
 
     render() {
-      console.log(this.props);
       const { error, isLoaded, DetailsArticle } = this.state;
       if (error) {
         return <div>Erreur : {error.message}</div>;
