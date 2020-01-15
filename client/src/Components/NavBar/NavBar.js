@@ -45,7 +45,7 @@ class NavBar extends Component {
                         <input list="result-search" className="form-control mr-sm-2" type="search" placeholder="Rechercher" onChange={(e) => this.searchArticles(e)} />
                         <datalist id="result-search">
                         {searchResult.map(result => {
-                           return <option key={result.name} value={result.name} />
+                        return <option key={result.name} value={result.name} />
                         })}
                         </datalist>
                         <button className="btn btn-warning my-2 my-sm-0" type="submit"><i className="fas fa-search"></i></button>
