@@ -41,6 +41,11 @@ class Categories
      */
     private $image;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $banner;
+
     public function __construct()
     {
         $this->articles = new ArrayCollection();
@@ -102,6 +107,18 @@ class Categories
     public function setImage(string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getBanner(): ?string
+    {
+        return $this->banner;
+    }
+
+    public function setBanner(?string $banner): self
+    {
+        $this->banner = $banner;
 
         return $this;
     }

@@ -56,11 +56,13 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"user:read", "user:write"})
      */
     private $gender;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"user:read", "user:write"})
      */
     private $city;
 
@@ -96,11 +98,19 @@ class User implements UserInterface
      */
     public function getRoles(): array
     {
-        $roles = $this->roles;
-        // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
+        // $roles = $this->roles;
+        // // guarantee every user at least has ROLE_USER
+        // $roles[] = 'ROLE_USER';
 
-        return array_unique($roles);
+        // return array_unique($roles);
+        // if ($this->roles == null) {
+            return array_unique(array_merge(['ROLE_USER'], $this->roles));
+        // }
+        // else
+        // {
+        //     $roles = $this->roles;
+        //     return array_unique($roles);
+        // }
     }
 
     public function setRoles(array $roles): self
