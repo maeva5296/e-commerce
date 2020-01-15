@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Config from "../../config.json";
+import { Link } from "react-router-dom";
 
 class DetailsArticle extends Component {
 
@@ -8,7 +9,7 @@ class DetailsArticle extends Component {
         this.state = {
         error: null,
         isLoaded: false,
-        DeatilsArticle: []
+        DetailsArticle: []
         };
     }
     
@@ -41,16 +42,16 @@ class DetailsArticle extends Component {
         return (
           <div class="card-group">
             <div className="card">
+            <Link to={`/DescArticles/${ DetailsArticle.id }`}>
               <img key={ DetailsArticle.image } src={ Config.url +"/" + DetailsArticle.image } className="card-img-top" alt="Desc Img"/>
               <div className="card-body">
                 <h5 key={ DetailsArticle.name } className="card-title">{ DetailsArticle.name }</h5>
-                <p key={ DetailsArticle.description } className="card-text">{ DetailsArticle.description }</p>
-                <p key={ DetailsArticle.stock } className="card-text">{ DetailsArticle.stock }</p>
                 <div id="article">
                   <h5 key={ DetailsArticle.price } class="text-center font-weight-bold" id="price">{ DetailsArticle.price }<small className="font-weight-bold">€</small></h5>
-                  <button type="submit" className="btn btn-success">Ajouter au panier <i className="fas fa-shopping-cart"></i></button>
+                  <button type="submit" className="btn btn-success"><i className="fas fa-shopping-cart"></i></button>
                 </div>
               </div>
+            </Link>
             </div>
           </div>
         );

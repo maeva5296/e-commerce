@@ -9,6 +9,7 @@ import Article from './Components/Article/Article';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import Admin from './Components/Admin/Admin';
+import DescArticle from './Components/DescArticle/DescArticle';
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/login" component={Login}/>
           <Route path="/admin" component={Admin}/>
           <Route path="/articles/:id" render={(props) => <Article {...props}/>}/>
+          <Route path="/DescArticles/:id" render={(props) => <DescArticle {...props}/>}/>
         </Switch>
       </Router>
     </div>
