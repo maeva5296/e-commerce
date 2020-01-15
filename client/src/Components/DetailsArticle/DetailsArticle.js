@@ -38,7 +38,7 @@ class DetailsArticle extends Component {
 
     componentDidUpdate(prevProps)
     {
-      if(prevProps.api_path != this.props.api_path)
+      if(prevProps.api_path !== this.props.api_path)
         this.search_api()
     }
 
