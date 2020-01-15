@@ -6,9 +6,12 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
+use ApiPlatform\Core\Annotation\ApiFilter;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\OrderFilter;
 
 /**
  * @ApiResource()
+ * @ApiFilter(OrderFilter::class, properties={"visits", "price", "name"}, arguments={"orderParameterName"="order"})
  * @ORM\Entity(repositoryClass="App\Repository\ArticlesRepository")
  */
 class Articles

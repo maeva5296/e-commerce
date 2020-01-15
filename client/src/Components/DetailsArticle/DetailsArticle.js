@@ -12,25 +12,36 @@ class DetailsArticle extends Component {
         DetailsArticle: []
         };
     }
+
+    search_api()
+    {
+      fetch(`https://127.0.0.1:8000${this.props.api_path}`)
+        .then(res => res.json())
+        .then(
+          (result) => {
+            this.setState({
+              isLoaded: true,
+              DetailsArticle: result
+            });
+          },
+          (error) => {
+            this.setState({
+              isLoaded: true,
+              error
+            });
+          }
+        )
+    }
     
     componentDidMount() {
-        fetch(`https://127.0.0.1:8000${this.props.api_path}`)
-          .then(res => res.json())
-          .then(
-            (result) => {
-              this.setState({
-                isLoaded: true,
-                DetailsArticle: result
-              });
-            },
-            (error) => {
-              this.setState({
-                isLoaded: true,
-                error
-              });
-            }
-          )
+      this.search_api()
       }
+
+    componentDidUpdate(prevProps)
+    {
+      if(prevProps.api_path !== this.props.api_path)
+        this.search_api()
+    }
 
     render() {
       const { error, isLoaded, DetailsArticle } = this.state;
@@ -48,7 +59,7 @@ class DetailsArticle extends Component {
                 <h5 key={ DetailsArticle.name } className="card-title">{ DetailsArticle.name }</h5>
                 <div id="article">
                   <h5 key={ DetailsArticle.price } class="text-center font-weight-bold" id="price">{ DetailsArticle.price }<small className="font-weight-bold">€</small></h5>
-                  <button type="submit" className="btn btn-success"><i className="fas fa-shopping-cart"></i></button>
+                  <button type="submit" className="btn btn-success">Voir<i className="fas fa-shopping-cart"></i></button>
                 </div>
               </div>
             </Link>
