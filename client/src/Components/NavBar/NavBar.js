@@ -42,7 +42,12 @@ class NavBar extends Component {
                         <img className="img-fluid" src={Config.url + "/images/logo.png"} id="logo" />
                     </a>
                     <form className="form-inline my-2 my-lg-0">
-                        <input className="form-control mr-sm-2" type="search" placeholder="Rechercher" onChange={(e) => this.searchArticles(e)} />
+                        <input list="result-search" className="form-control mr-sm-2" type="search" placeholder="Rechercher" onChange={(e) => this.searchArticles(e)} />
+                        <datalist id="result-search">
+                        {searchResult.map(result => {
+                           return <option key={result.name} value={result.name} />
+                        })}
+                        </datalist>
                         <button className="btn btn-warning my-2 my-sm-0" type="submit"><i className="fas fa-search"></i></button>
                         <div className="icons-nav">
                             <div className="dropdown">
@@ -67,11 +72,6 @@ class NavBar extends Component {
                             </div>
                         </div>
                     </form>
-                </div>
-                <div className="text-success">
-                    {searchResult.map(result => {
-                        return <p key={result.name}>{result.name}</p>
-                    })}
                 </div>
             </nav>
         );
