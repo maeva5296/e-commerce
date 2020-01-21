@@ -1,7 +1,7 @@
 import React from "react";
 import './NavBar.css';
 import Config from '../../config.json';
-
+import { Link } from "react-router-dom";
 
 function NavBar() {
     return (
@@ -34,7 +34,9 @@ function NavBar() {
                                 <a className="dropdown-item" href="#">Article 2</a>
                                 <div className="dropdown-divider"></div>
                                 <a className="dropdown-item" href="#">Article 3</a>
+                                <Link to={`/ShoppingCart/:id`}>
                                 <button type="button" className="btn btn-warning btn-block" id="voir-panier">Voir panier ></button>
+                                </Link>
                             </div>
                         </div>
                     </div>
