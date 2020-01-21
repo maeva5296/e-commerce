@@ -64,7 +64,7 @@ class Article extends React.Component {
                   </div>
                 </div>
                 <div className="container">
-                  <Ariane nameCategorie={ categorieName } />
+                  <Ariane nameCategorie={ categorieName }/>
                   <SortArticles id={this.props.match.params.id} sort_path={this.update_state_article} />
                   <div className="row justify-content-center">
                     { ArticleDetails }

@@ -20,10 +20,31 @@ class DescArticle extends React.Component {
           .then(res => res.json())
           .then(
             (result) => {
+              
               this.setState({
                 isLoaded: true,
                 DescArticle: result,
+                articleName: result['name'],
               });
+              fetch(`https://127.0.0.1:8000${result.categoryId}`)
+                .then(res => res.json())
+                .then(
+                  (result2) => {
+                    
+                    
+                    this.setState({
+                      isLoaded: true,
+                      categorieId: result2['id'],
+                      categorieName: result2['name'],
+                    });
+                  },
+                  (error) => {
+                    this.setState({
+                      isLoaded: true,
+                      error
+                    });
+                  }
+                )
             },
             (error) => {
               this.setState({
@@ -35,18 +56,19 @@ class DescArticle extends React.Component {
       }
 
       render() {
-        const { error, isLoaded, DescArticle } = this.state;
-      if (error) {
-        return <div>Erreur : {error.message}</div>;
-      } else if (!isLoaded) {
-        return <div>Chargement…</div>;
-      } else {
+        const { error, isLoaded, articleName, categorieName, DescArticle, categorieId } = this.state;
+        console.log(categorieId);
+        if (error) {
+          return <div>Erreur : {error.message}</div>;
+        } else if (!isLoaded) {
+          return <div>Chargement…</div>;
+        } else {
         return (
           <div>
             <NavBar/>
               <div className="container">
                 <div className="row justify-content-center">
-                  <Ariane/> 
+                  <Ariane nameCategorie={ categorieName } nameArticle={ articleName } idCategorie={ categorieId }/> 
                   <div class="card mb-3">
                     <div class="row no-gutters" id="width-row">
                       <div class="col-md-5 pl-5 pr-3">

@@ -7,7 +7,7 @@ function NavBar() {
     return (
         <nav className="navbar navbar-dark bg-dark">
             <div className="container">
-                <a href="#">
+                <a href="/">
                     <img className="img-fluid" src={ Config.url + "/images/logo.png" } id="logo" />
                 </a>
                 <form className="form-inline my-2 my-lg-0">
