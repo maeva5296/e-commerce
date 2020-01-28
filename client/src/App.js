@@ -10,6 +10,7 @@ import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import Admin from './Components/Admin/Admin';
 import DescArticle from './Components/DescArticle/DescArticle';
+import ShoppingCart from './Components/ShoppingCart/ShoppingCart';
 import './App.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/admin" component={Admin}/>
           <Route path="/articles/:id" render={(props) => <Article {...props}/>}/>
           <Route path="/DescArticles/:id" render={(props) => <DescArticle {...props}/>}/>
+          <Route path="/ShoppingCart/:id" render={(props) => <ShoppingCart {...props}/>}/>
         </Switch>
       </Router>
     </div>

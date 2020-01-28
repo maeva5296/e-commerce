@@ -1,0 +1,25 @@
+#width-row {
+    width: 100%;
+}
+
+#width-select {
+    width: 40%;
+}
+
+p {
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+
+hr {
+    margin: 0px;
+}
+
+select {
+    margin-left: 50px;
+}
+
+#total {
+    height: 30vh;
+    background-color: #F7F7F7;
+}

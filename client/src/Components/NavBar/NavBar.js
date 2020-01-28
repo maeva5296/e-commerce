@@ -55,15 +55,20 @@ class NavBar extends Component {
                                     <a className="dropdown-item text-danger" href="#">Déconnexion</a>
                                 </div>
                             </div>
-                            <div className="dropdown">
-                                <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i className="fas fa-shopping-cart"></i>
-                                </a>
-                                <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a className="dropdown-item" href="#">Article 1</a>
-                                    <div className="dropdown-divider"></div>
-                                    <button type="button" className="btn btn-warning btn-block" id="voir-panier">Voir panier ></button>
-                                </div>
+                        </div>
+                        <div className="dropdown">
+                            <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i className="fas fa-shopping-cart"></i>
+                            </a>
+                            <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a className="dropdown-item" href="#">Article 1</a>
+                                <div className="dropdown-divider"></div>
+                                <a className="dropdown-item" href="#">Article 2</a>
+                                <div className="dropdown-divider"></div>
+                                <a className="dropdown-item" href="#">Article 3</a>
+                                <Link to={`/ShoppingCart/:id`}>
+                                <button type="button" className="btn btn-warning btn-block" id="voir-panier">Voir panier ></button>
+                                </Link>
                             </div>
                         </div>
                     </form>

@@ -59,12 +59,6 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Groups({"user:read", "user:write"})
      */
-    private $gender;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     * @Groups({"user:read", "user:write"})
-     */
     private $city;
 
     public function getId(): ?int
@@ -100,21 +94,8 @@ class User implements UserInterface
     public function getRoles(): array
     {
         $roles = $this->roles;
-        // // guarantee every user at least has ROLE_USER
-        // $roles[] = 'ROLE_USER';
 
         return array_unique($roles);
-
-        // if ($this->roles == null) {
-        //     $roles = $this->roles;
-        //     $roles[] = 'ROLE_USER';
-        //     return array_unique($roles);
-        // }
-        // else
-        // {
-        //     $roles = $this->roles;
-        //     return array_unique($roles);
-        // }
     }
 
     public function setRoles(array $roles): self
@@ -164,18 +145,6 @@ class User implements UserInterface
     public function setFirstname(string $firstname): self
     {
         $this->firstname = $firstname;
-
-        return $this;
-    }
-
-    public function getGender(): ?string
-    {
-        return $this->gender;
-    }
-
-    public function setGender(?string $gender): self
-    {
-        $this->gender = $gender;
 
         return $this;
     }
