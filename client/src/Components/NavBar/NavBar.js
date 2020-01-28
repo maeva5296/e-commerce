@@ -2,13 +2,10 @@ import React, { Component } from "react";
 import './NavBar.css';
 import Config from '../../config.json';
 
-
 class NavBar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            error: null,
-            isLoaded: false,
             searchResult: []
         };
     }
@@ -18,19 +15,17 @@ class NavBar extends Component {
         .then(res => res.json())
         .then(
             (result) => {
-                console.log(result)
                 this.setState({
-                    isLoaded: true,
                     searchResult: result['hydra:member']
-                });
-            },
-            (error) => {
-                this.setState({
-                    isLoaded: true,
-                    error
                 });
             }
         )
+    }
+
+    redirectSearch() {
+        var id = this.state.searchResult[0].id;
+        console.log(id);
+        window.location=`http://localhost:3000/DescArticles/${id}`;
     }
 
     render() {
@@ -38,7 +33,7 @@ class NavBar extends Component {
         return (
             <nav className="navbar navbar-dark bg-dark">
                 <div className="container">
-                    <a href="#">
+                    <a href="/">
                         <img className="img-fluid" src={Config.url + "/images/logo.png"} id="logo" />
                     </a>
                     <form className="form-inline my-2 my-lg-0">
@@ -48,7 +43,7 @@ class NavBar extends Component {
                         return <option key={result.name} value={result.name} />
                         })}
                         </datalist>
-                        <button className="btn btn-warning my-2 my-sm-0" type="submit"><i className="fas fa-search"></i></button>
+                        <button className="btn btn-warning my-2 my-sm-0" type="submit" onClick={() => this.redirectSearch()}><i className="fas fa-search"></i></button>
                         <div className="icons-nav">
                             <div className="dropdown">
                                 <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
