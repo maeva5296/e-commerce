@@ -41,15 +41,15 @@ class BestArticles extends Component {
             for(var i=0; i < 5; i++) {
                 allBestArticles.push(
                     <div className="col">
-                    <div className="card" id="best-articles-card">
-                        <img src={ Config.url + "/" + BestArticle[i]['image'] } className="card-img-top img-thumbnail" alt="images product" />
-                        <div className="card-body text-center">
-                            <h5 className="card-title">{ BestArticle[i]['name'] }</h5>
-                            <p className="text-center text-success">{ BestArticle[i]['visits'] } Vus</p>
-                            <a href="#" className="btn btn-warning pr-5 pl-5 font-weight-bold">Voir</a>
+                        <div className="card" id="best-articles-card">
+                            <img src={ Config.url + "/" + BestArticle[i]['image'] } className="card-img-top img-thumbnail" alt="images product" />
+                            <div className="card-body text-center">
+                                <h5 className="card-title">{ BestArticle[i]['name'] }</h5>
+                                <p className="text-center text-success">{ BestArticle[i]['visits'] } Vus</p>
+                                <a href="/" className="btn btn-warning pr-5 pl-5 font-weight-bold">Voir</a>
+                            </div>
                         </div>
                     </div>
-                </div>
                 )
             }
             return (

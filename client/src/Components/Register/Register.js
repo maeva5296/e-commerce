@@ -40,7 +40,7 @@ function Register() {
                         </form>
                         <hr/>
                         <p className="card-text">Déjà client ?</p>
-                        <a href="#" className="font-weight-bold"><u>Se connecter</u></a>
+                        <a href="/" className="font-weight-bold"><u>Se connecter</u></a>
                     </div>
                 </div>
             </div>

@@ -55,7 +55,6 @@ class DescArticle extends React.Component {
 
       render() {
         const { error, isLoaded, articleName, categorieName, DescArticle, categorieId } = this.state;
-        console.log(categorieId);
         if (error) {
           return <div>Erreur : {error.message}</div>;
         } else if (!isLoaded) {
@@ -67,40 +66,40 @@ class DescArticle extends React.Component {
               <div className="container">
                 <div className="row justify-content-center">
                   <Ariane nameCategorie={ categorieName } nameArticle={ articleName } idCategorie={ categorieId }/> 
-                  <div class="card mb-3">
-                    <div class="row no-gutters" id="width-row">
-                      <div class="col-md-5 pl-5 pr-3">
+                  <div className="card mb-3">
+                    <div className="row no-gutters" id="width-row">
+                      <div className="col-md-5 pl-5 pr-3">
                         <img key={ DescArticle.image } src={ Config.url +"/" + DescArticle.image } className="card-img-top" alt="Desc Img"/>
                       </div>
-                      <div class="col-md-7 pl-5 pr-3">
-                        <div class="card-body text-right">
-                          <div class="row">
-                            <div class="col-sm-12">
-                              <div class="card-body">
+                      <div className="col-md-7 pl-5 pr-3">
+                        <div className="card-body text-right">
+                          <div className="row">
+                            <div className="col-sm-12">
+                              <div className="card-body">
                               <h5 key={ DescArticle.name } className="card-title h2">{ DescArticle.name }</h5>
                               <p key={ DescArticle.description } className="card-text">{ DescArticle.description }</p>
                               <p key={ DescArticle.stock } className="card-text">STOCK : { DescArticle.stock }</p>
                               </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="card-body">
+                            <div className="col-sm-6">
+                                <div className="card-body">
                                   <h5 key={ DescArticle.price } className="text-center font-weight-bold h2" id="price">{ DescArticle.price }<small className="font-weight-bold">€</small></h5>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="card-body">
+                            <div className="col-sm-6">
+                                <div className="card-body">
                                   <button type="submit" className="btn btn-success btn-lg">Ajouter au panier <i className="fas fa-shopping-cart"></i></button>
                                 </div>
                             </div>
                           </div>
-                          <div class="row">
-                            <div class="col-sm-6">
-                                <div class="card-body">
+                          <div className="row">
+                            <div className="col-sm-6">
+                                <div className="card-body">
                                   <p className="card-text">Les transporteurs suivants sont disponibles: </p>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="card-body">
+                            <div className="col-sm-6">
+                                <div className="card-body">
                                   <img className="img-fluid" id="img-width" src={ Config.url + "/images/colissimo.png" } alt="images transport" />
                                   <img className="img-fluid" id="img-width" src={ Config.url + "/images/Chronopost.png" } alt="images transport" />
                                 </div>
