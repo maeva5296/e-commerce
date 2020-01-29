@@ -26,7 +26,7 @@ function Login() {
                         </form>
                         <hr/>
                         <p className="card-text">Pas encore client ?</p>
-                        <a href="#" className="font-weight-bold"><u>S'inscrire</u></a>
+                        <a href="/" className="font-weight-bold"><u>S'inscrire</u></a>
                     </div>
                 </div>
             </div>
