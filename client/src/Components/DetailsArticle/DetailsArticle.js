@@ -51,14 +51,14 @@ class DetailsArticle extends Component {
         return <div>Chargement…</div>;
       } else {
         return (
-          <div class="card-group">
+          <div className="card-group">
             <div className="card">
             <Link to={`/DescArticles/${ DetailsArticle.id }`}>
               <img key={ DetailsArticle.image } src={ Config.url +"/" + DetailsArticle.image } className="card-img-top" alt="Desc Img"/>
               <div className="card-body">
                 <h5 key={ DetailsArticle.name } className="card-title">{ DetailsArticle.name }</h5>
                 <div id="article">
-                  <h5 key={ DetailsArticle.price } class="text-center font-weight-bold" id="price">{ DetailsArticle.price }<small className="font-weight-bold">€</small></h5>
+                  <h5 key={ DetailsArticle.price } className="text-center font-weight-bold" id="price">{ DetailsArticle.price }<small className="font-weight-bold">€</small></h5>
                   <button type="submit" className="btn btn-success">Voir<i className="fas fa-shopping-cart"></i></button>
                 </div>
               </div>

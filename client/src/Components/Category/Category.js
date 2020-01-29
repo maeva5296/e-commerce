@@ -43,11 +43,11 @@ class Category extends React.Component {
             <div>
                 <div className="row mt-5">
                     {categorie.map(categorie => (
-                      <div className="col-3">
+                      <div key={categorie.image} className="col-3">
                         <Link to={`/articles/${categorie.id}`}>
-                        <img key={categorie.image} src={categorie.image} className="img-thumbnail" id="img_categorie" alt="images categories" />
+                        <img src={categorie.image} className="img-thumbnail" id="img_categorie" alt="images categories" />
                         <div className="overlay img-thumbnail">
-                            <div key={categorie.name} className="text">{categorie.name}</div>
+                            <div className="text">{categorie.name}</div>
                         </div>
                         </Link>
                     </div>

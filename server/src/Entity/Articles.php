@@ -8,10 +8,12 @@ use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 use ApiPlatform\Core\Annotation\ApiFilter;
 use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\OrderFilter;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 
 /**
  * @ApiResource()
  * @ApiFilter(OrderFilter::class, properties={"visits", "price", "name"}, arguments={"orderParameterName"="order"})
+ * @ApiFilter(SearchFilter::class, properties={"name": "start"})
  * @ORM\Entity(repositoryClass="App\Repository\ArticlesRepository")
  */
 class Articles

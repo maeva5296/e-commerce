@@ -60,7 +60,7 @@ class Article extends React.Component {
                 <NavBar/>
                 <div className="container-fluid">
                   <div className="row">
-                    <img src={ Config.url +"/" + categorieBanner } />
+                    <img src={ Config.url +"/" + categorieBanner } alt="Bannière"/>
                   </div>
                 </div>
                 <div className="container">

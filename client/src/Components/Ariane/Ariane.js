@@ -5,14 +5,14 @@ import './Ariane.css';
 class Ariane extends React.Component {
     constructor(props) {
         super(props);
-      }
+    }
     
-      render() {
+    render() {
         return (
         <div id="form" className="container">
             <div className="row justify-content">
                 <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
+                    <ol className="breadcrumb">
                         <li className="breadcrumb-item"><a href="/"><i className="fas fa-home"></i> / </a></li>
                         <Link to={`/articles/${this.props.idCategorie}`}>
                         <li className="breadcrumb-item"><a>{this.props.nameCategorie}</a> / </li>

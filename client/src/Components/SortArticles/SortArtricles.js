@@ -56,16 +56,16 @@ class SortArtricles extends Component {
         
         return (
             <div className="row">
-                <div class="col align-self-end mb-3">
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div className="col align-self-end mb-3">
+                    <div className="dropdown">
+                        <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Trier les produits
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <button class="dropdown-item" type="button" onClick={() => this.sort_articles("name_asc")}>Nom</button>
-                            <button class="dropdown-item" type="button" onClick={() => this.sort_articles("visits_desc")}>Top vus</button>
-                            <button class="dropdown-item" type="button" onClick={() => this.sort_articles("price_asc")}>Du - cher au + cher</button>
-                            <button class="dropdown-item" type="button" onClick={() => this.sort_articles("price_desc")}>Du + cher au - cher</button>
+                        <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <button className="dropdown-item" type="button" onClick={() => this.sort_articles("name_asc")}>Nom</button>
+                            <button className="dropdown-item" type="button" onClick={() => this.sort_articles("visits_desc")}>Top vus</button>
+                            <button className="dropdown-item" type="button" onClick={() => this.sort_articles("price_asc")}>Du - cher au + cher</button>
+                            <button className="dropdown-item" type="button" onClick={() => this.sort_articles("price_desc")}>Du + cher au - cher</button>
                         </div>
                     </div>
                 </div>
