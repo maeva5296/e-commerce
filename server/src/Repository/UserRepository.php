@@ -8,6 +8,8 @@ use Doctrine\Common\Persistence\ManagerRegistry;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\User\PasswordUpgraderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Lcobucci\JWT\Parser;
+use Lcobucci\JWT\Signer\Hmac\Sha256;
 
 /**
  * @method User|null find($id, $lockMode = null, $lockVersion = null)
@@ -34,6 +36,16 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         $user->setPassword($newEncodedPassword);
         $this->_em->persist($user);
         $this->_em->flush();
+    }
+
+    public function tokenAuth() {
+        $token = (new Parser())->parse((string) $token);
+        $token->getHeaders();
+        $token->getClaims();
+
+            echo $token->getHeader('jti');
+            echo $token->getClaim('iss');
+            echo $toekn->getClaim('uid');
     }
 
     // /**
