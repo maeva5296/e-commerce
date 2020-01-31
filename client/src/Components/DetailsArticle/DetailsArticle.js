@@ -59,7 +59,7 @@ class DetailsArticle extends Component {
                 <h5 key={ DetailsArticle.name } className="card-title">{ DetailsArticle.name }</h5>
                 <div id="article">
                   <h5 key={ DetailsArticle.price } className="text-center font-weight-bold" id="price">{ DetailsArticle.price }<small className="font-weight-bold">€</small></h5>
-                  <button type="submit" className="btn btn-success">Voir<i className="fas fa-shopping-cart"></i></button>
+                  <button type="submit" className="btn btn-success"><i className="fas fa-shopping-cart"></i></button>
                 </div>
               </div>
             </Link>

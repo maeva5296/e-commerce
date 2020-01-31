@@ -90,9 +90,10 @@ class Register extends React.Component {
                                         <div className="form-group">
                                             <input type="text" onChange={this.city} className="form-control" placeholder="Ville"/>
                                         </div>
-                                        <button type="submit" className="btn btn-primary btn-lg btn-block text-uppercase">Inscription</button>
+                                        <button type="submit" className="btn btn-warning btn-lg btn-block text-uppercase">Inscription</button>
                                     </form>
                                     <hr/>
+                                    <br/>
                                     <p className="card-text">Déjà client ?</p>
                                     <a href="#" className="font-weight-bold"><u>Se connecter</u></a>
                                 </div>
