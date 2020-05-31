@@ -1,3 +1,9 @@
+## e-commerce
+
+Plateforme de site marchand
+
+### Installation
+
 1. Exécuter npm install depuis le dossier client/
 
 2. Exécuter composer update depuis le dossier server/
@@ -11,3 +17,10 @@
 6. symfony server:start depuis le dossier server/
 
 7. npm start depuis le dossier client/
+
+### Langages utilisés ?
+
+- ReactJS
+- Symfony
+- API Platform
+- Boostrap
